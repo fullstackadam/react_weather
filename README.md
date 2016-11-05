@@ -1,2 +1,2 @@
-# react_boilerplate
-React.js Boilerplate App
+# react_weather
+React Weather App
