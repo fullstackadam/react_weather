@@ -1,12 +1,12 @@
-var React = require('react');
+import React from 'react';
 
-var WeatherForm = React.createClass({
+const WeatherForm = React.createClass({
 	onFormSubmit: function(e) {
 		e.preventDefault();
 
-		var location = this.refs.location.value;
+		const location = this.refs.location.value;
 
-		if(location.length > 0) {
+		if (location.length > 0) {
 			this.refs.location.value = '';
 			this.props.onNewLocation(location);
 		}

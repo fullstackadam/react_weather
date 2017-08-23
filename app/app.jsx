@@ -1,17 +1,17 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var {Route, Router, IndexRoute, hashHistory} = require('react-router');
-var Main = require('Main');
-var Weather = require('Weather');
-var About = require('About');
-var Examples = require('Examples');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {Route, Router, IndexRoute, hashHistory} from 'react-router';
+import Main from 'Main';
+import Weather from 'Weather';
+import About from 'About';
+import Examples from 'Examples';
 
 // load foundation
-require('style!css!foundation-sites/dist/foundation.min.css');
-$(document).foundation();
+//require('style!css!foundation-sites/dist/foundation.min.css');
+//$(document).foundation();
 
 // app css
-require('style!css!sass!applicationStyles');
+//require('style!css!sass!applicationStyles');
 
 ReactDOM.render(
 	<Router history={hashHistory}>

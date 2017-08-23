@@ -1,6 +1,6 @@
-var React = require('react');
+import React from 'react';
 
-var WeatherMessage = ({temp, city}) => {
+const WeatherMessage = ({temp, city}) => {
 	return (
 		<div>
 			<h3 className="text-center">It is {temp} in {city}</h3>

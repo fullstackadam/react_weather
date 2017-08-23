@@ -1,7 +1,7 @@
-var React = require('react');
-var {Link} = require('react-router');
+import React from 'react';
+import {Link} from 'react-router';
 
-var About = (props) => {
+const About = (props) => {
 	return (
 		<div>
 			<h1 className="text-center page-title">About</h1>

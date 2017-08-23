@@ -1,10 +1,10 @@
-var React = require('react');
-var WeatherForm = require('WeatherForm');
-var WeatherMessage = require('WeatherMessage');
-var openWeatherMap = require('openWeatherMap');
-var ErrorModal = require('ErrorModal');
+import React from 'react';
+import WeatherForm from 'WeatherForm';
+import WeatherMessage from 'WeatherMessage';
+import openWeatherMap from 'openWeatherMap';
+// const ErrorModal from 'ErrorModal';
 
-var Weather = React.createClass({
+const Weather = React.createClass({
 	getDefaultProps: function() {
 		return {
 			city: 'Loveland, CO',
@@ -17,7 +17,7 @@ var Weather = React.createClass({
 		};
 	},
 	handleNewLocation: function(city) {
-		var that = this;
+		const that = this;
 
 		this.setState({
 			isLoading: true,
@@ -42,7 +42,7 @@ var Weather = React.createClass({
 			})
 	},
 	componentDidMount: function() {
-		var city = this.props.location.query.city;
+		const city = this.props.location.query.location;
 
 		if(city && city.length > 0) {
 			console.log('did mount', city);
@@ -51,7 +51,7 @@ var Weather = React.createClass({
 		}
 	},
 	componentWillReceiveProps: function(newProps) {
-		var city = newProps.location.query.city;
+		const city = newProps.location.query.city;
 
 		if(city && city.length > 0) {
 			this.handleNewLocation(city);
@@ -59,7 +59,7 @@ var Weather = React.createClass({
 		}
 	},
 	render: function() {
-		var {isLoading, city, temp, errorMessage} = this.state;
+		const {isLoading, city, temp, errorMessage} = this.state;
 
 		function renderMessage() {
 			if (isLoading) {

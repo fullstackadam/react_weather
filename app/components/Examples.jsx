@@ -1,7 +1,7 @@
-var React = require('react');
-var {Link} = require('react-router');
+import React from 'react';
+import {Link} from 'react-router';
 
-var Examples = (props) => {
+const Examples = (props) => {
 	return (
 		<div>
 			<h1 className="text-center page-title">Examples Component</h1>
@@ -12,6 +12,9 @@ var Examples = (props) => {
 				</li>
 				<li>
 					<Link to='/?location=San+Francisco'>San Francisco, CA</Link>
+				</li>
+				<li>
+					<Link to='/?location=New+York'>New York, NY</Link>
 				</li>
 			</ol>
 		</div>

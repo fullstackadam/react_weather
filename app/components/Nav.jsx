@@ -1,11 +1,13 @@
-var React = require('react');
-var {Link, IndexLink} = require('react-router');
+import React from 'react';
+import {Link, IndexLink} from 'react-router';
 
-var Nav = React.createClass({
+const Nav = React.createClass({
 	onSearch: function(e) {
 		e.preventDefault();
-		var city = encodeURIComponent(this.refs.city.value);
-		if(city.length > 0) {
+
+		const city = encodeURIComponent(this.refs.city.value);
+
+		if (city.length > 0) {
 			this.refs.city.value = '';
 			window.location.hash = '#/?city='+city;
 		}
